@@ -7,6 +7,7 @@ generates two keys and translates a phrase using them.
 ## dCripta
 takes two keys and an encrypted phrase and decrypts it.
 
+## License
 [![Creative Commons
 License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)  
 LlamaxCripta software and documentation is licensed under a [Creative Commons

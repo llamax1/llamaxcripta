@@ -1,0 +1,35 @@
+# nCripta - part of LlamaxCripta by Llamax
+# This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+# To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
+import time,sys,string,random
+
+print("LlamaxCripta - nCripta \n")
+print("This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.")
+print("To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.\n")
+
+# Sets each key as a list containing letters a-z (in both cases) and digits 0-9.
+key1 = list(string.letters + string.digits)
+key2 = list(string.letters + string.digits)
+# Randomly shuffles each key.
+random.shuffle(key1)
+random.shuffle(key2)
+# Converts each key to a string, with each item joined by nothing
+key1 = string.join(key1, "")
+key2 = string.join(key2, "")
+
+# Tells the keys to the user, along with a security tip.
+print("Key 1 is " + key1 + "\n")
+print("Key 2 is " + key2 + "\n")
+print("Save these on TWO DIFFERENT DRIVES, and save them to files with 'normal' names.\n")
+
+# Prompts for the phrase to be encrypted
+text = raw_input ("\nEnter phrase to encrypt: ")
+
+# Makes a translation table using both keys.
+# See https://docs.python.org/2/library/string.html#string.maketrans for more info.
+translate_table = string.maketrans(key1, key2)
+# Translates the phrase using translate_table and shares it with the user
+# See https://docs.python.org/2/library/string.html#string.translate for more info.
+print("Encrypted phrase is:\n" + text.translate(translate_table))
+print("\nSave this on a third drive, again with a 'normal' name.")

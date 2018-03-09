@@ -1,5 +1,5 @@
 # LlamaxCripta
-is a set of basic encription software made with Python 2. It works by generating two random keys, then it makes a 'table' for it to translate between the two.
+is a set of basic encryption software made with Python 2. It works by generating two random keys, then it makes a 'table' for it to translate between the two.
 
 ## nCripta
 generates two keys and translates a phrase using them.
